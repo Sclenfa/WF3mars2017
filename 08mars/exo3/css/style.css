@@ -63,3 +63,61 @@ Style largeur style
         /* Center une balise de type block réduite en largeur */
         margin: 2rem auto;
     }
+
+    section{
+        margin-bottom: 2rem;
+    }
+
+/*
+Mise en forme typographique
+*/
+
+    .Presentation{
+        /* Modifier la famille de charactere de la font */
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        /* Modifier la taille de la font */
+        font-size: 1.7rem;
+
+        /* Modifier l'interlignage */
+        line-height: 2em;
+
+        /* modifier la graisse de la font */
+        font-weight: bold;
+
+        /* Ajouter une ombre portée à la font */
+        text-shadow: .5rem .5rem .5rem fuchsia;
+
+        /* Modifier  la casse de la font */
+        text-transform: uppercase;
+
+        /* Modifier le style de la font */
+        font-style: italic;
+
+        /* Modifier la décoration de la font */
+        text-decoration: underline;
+
+        /* Modifier la couleur de la font */
+        color: peru;
+
+    }
+
+/*
+Utilisation des couleurs
+*/
+    #Portfolio{
+        background-color: black; /* Réference hexadécimal */
+        color: white; /* Nom intelligible */
+        text-align: center; /* Agit sur les textes et sur les balises inline (enfant) */
+
+    }
+
+    #Portfolio article{
+        background-color: rgba(240, 128, 128, 0.52);
+        padding: 2rem;
+        margin-bottom: 1rem;
+
+        /* Faire en sorte d'afficher les articles sur 3 colonnes */
+        display: inline-block;
+        
+    }
