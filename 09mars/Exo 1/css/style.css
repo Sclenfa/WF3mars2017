@@ -1,0 +1,45 @@
+/*
+Style reset
+*/
+
+    *{
+        margin:0;
+        padding:0;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif
+    }
+    a{
+        text-decoration: none;
+    }
+    /* Faire en sorte que les images ne dépassent pas leurs parents */
+    img{
+        max-width: 100%;
+    }
+
+/*
+Style Header
+*/
+    header{
+        text-align: center;
+        background: #18bc9c;
+        color: white
+    }
+    nav{
+        text-transform: uppercase;
+        background: #2c3e50;
+        text-align: left;
+    }
+    nav a{
+        color:white;
+        font-weight: bold;
+    }
+    li{
+        display:inline-block;
+        margin-right: 1rem;
+    }
+
