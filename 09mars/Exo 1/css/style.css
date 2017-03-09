@@ -11,7 +11,7 @@ Style reset
     }
     body{
         font-size: 1.5rem;
-        font-family: Arial, Helvetica, sans-serif
+        font-family: "Arial", sans-serif
     }
     a{
         text-decoration: none;
@@ -20,6 +20,65 @@ Style reset
     img{
         max-width: 100%;
     }
+    section{
+        padding: 6rem 0rem;
+    }
+    h2{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+    h3{
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+/*
+Style portfolio
+*/
+    #portfolio a{
+        display:none;
+    }
+    #portfolio article{
+        display:inline-block;
+        width: 30%;
+        margin: 1rem;
+    }
+    #portfolio{
+        text-align: center;
+    }
+
+/*
+Style About
+*/
+    
+     #About{
+        background-color: #18bc9c;
+        color: white;
+        text-align: center;
+        font-size: 1.9rem;
+
+    }
+    #About p{
+        /* Afficher le texte sur deux colonnes */
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        text-align:justify;
+        margin-bottom: 4rem;
+    }
+    #About a{
+        color:white;
+        border:.3rem solid white;
+        padding:1rem 1.5rem;
+        font-weight: bold;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        border-radius: 1rem;
+
+    }
 
 /*
 Style Header
@@ -27,12 +86,15 @@ Style Header
     header{
         text-align: center;
         background: #18bc9c;
-        color: white
+        color: white;
+        padding-bottom: 6rem;
     }
     nav{
         text-transform: uppercase;
         background: #2c3e50;
         text-align: left;
+        padding: 3rem;
+        margin-bottom: 6rem;
     }
     nav a{
         color:white;
@@ -41,5 +103,63 @@ Style Header
     li{
         display:inline-block;
         margin-right: 1rem;
+    }
+    h1{
+        padding-top: 3rem;
+        font-size: 7rem;
+        text-transform: uppercase;
+    }
+    header p{
+        font-size: 2.5rem
+    }
+/*
+Style contact
+*/
+
+    input, textarea{
+        display:block;
+        width:90%;
+        margin: 1rem auto;
+        font-size: 2rem;
+        padding:1rem;
+        border:none;
+        border-bottom:.1rem solid #dddddd;
+    }
+    textarea{
+        /* Définir une hauteur minimum */
+        min-height: 20rem;
+    }
+
+    /* Selectionner une balise grâce a son attribut et sa valeur */
+    [type="submit"]{
+        width:8rem;
+        display:inline-block;
+        background: #18bc9c;
+        color:white;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        margin-left: 3rem;
+    }
+
+/*
+Style Footer
+*/
+    footer{
+        background: #2c3e50;
+        text-align: center;
+        color: white;
+        }
+    footer article{
+        display:inline-block;
+        width:30%;
+        vertical-align: top;      
+    }
+    [href="https://google.com"]{
+        color: #18bc9c;
+        font-size: 2rem
+    }
+    aside{
+        padding:1.5rem;
+        background: #233140;
     }
 
