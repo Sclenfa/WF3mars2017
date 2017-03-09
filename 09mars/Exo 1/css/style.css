@@ -36,6 +36,14 @@ Style reset
     }
 
 /*
+Style largeur maximum
+*/
+    nav ul,#portfolio,#About p,#Contact,footer section{
+        max-width: 95rem;
+        margin: auto;
+    }
+
+/*
 Style portfolio
 */
     #portfolio a{
