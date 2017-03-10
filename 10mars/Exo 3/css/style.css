@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Diplomata+SC|Griffy|Rock+Salt');
+
 /*
 Style reset
 */
@@ -11,7 +13,8 @@ Style reset
     }
     body{
         font-size: 1.5rem;
-        font-family: "Arial", sans-serif
+        font-family: 'Griffy', cursive;
+        font-weight: 400;
     }
     a{
         text-decoration: none;
@@ -34,26 +37,34 @@ Style reset
         font-size: 2.5rem;
         margin-bottom: 3rem;
     }
+    h1,h2,h3{
+        font-family: 'Diplomata SC', cursive;
+        font-weight: 400;
+    }
 
 /*
 Style largeur maximum
 */
-    nav ul,#portfolio,#About p,#Contact,footer section{
+    nav ul,
+    main section:first-child,
+    main section:nth-child(2) p,
+    main section:last-child,
+    footer section{
         max-width: 95rem;
         margin: auto;
     }
 
 /*
-Style portfolio
+Stylemain section:first-child
 */
     
-    #portfolio article{
+    main section:first-child article{
         display:inline-block;
         width: 30%;
         margin: 1rem;
         position: relative;
     }
-    #portfolio a{
+    main section:first-child a{
         color: white;
         background: rgba(24, 188, 156, .7);
         position: absolute;
@@ -71,25 +82,25 @@ Style portfolio
         transition: all .5s;
 
     }
-    #portfolio a:hover{
+    main section:first-child a:hover{
         opacity:1;
     }
-    #portfolio{
+    main section:first-child{
         text-align: center;
     }
 
 /*
-Style About
+Stylemain section:nth-child(2)
 */
     
-     #About{
+     main section:nth-child(2){
         background-color: #18bc9c;
         color: white;
         text-align: center;
         font-size: 1.9rem;
 
     }
-    #About p{
+    main section:nth-child(2) p{
         /* Afficher le texte sur deux colonnes */
         -webkit-column-count: 2;
         -moz-column-count: 2;
@@ -97,7 +108,7 @@ Style About
         text-align:justify;
         margin-bottom: 4rem;
     }
-    #About a{
+    main section:nth-child(2) a{
         color:white;
         border:.3rem solid white;
         padding:1rem 1.5rem;
@@ -137,7 +148,7 @@ Style Header
         margin-right: 1rem;
     }
     /* Sortir la balise du flux pour la repositionner precisement */
-     #firstNavLi{
+     nav li:first-child{
         position: absolute;
         left: 0;
         font-size: 1.5em;

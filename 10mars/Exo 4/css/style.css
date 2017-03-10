@@ -1,0 +1,70 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+nav{
+    text-align: right;
+    position: relative;
+}
+nav li{
+    display: inline-block;
+}
+/* Selectionner le premier enfant */
+nav li:first-child{
+    position:absolute;
+    left:0;
+}
+/* Selectionner le deuxieme enfant */
+nav li:nth-child(2){
+    background: red;
+}
+/* Selectionner le dernier enfant */
+nav li:last-child{
+    font-size: 3rem
+}
+/* Selectionner la premiere balise rencontré */
+header p:first-of-type{
+    font-size: 4rem
+}
+/* Selectionner une balise par son attribut et sa valeur */
+header [alt="Cabin"]{
+    width: 1rem;
+}
+/* extraire une balise de la selection */
+textarea, input:not([type="submit"]){
+    display: block;
+    width: 100%;
+}
+/* Selecteur d'element adjacent */
+a + img{
+    width: 2rem;
+}
+/* Selecteur d'enfant de premier niveau */
+main > a{
+    font-size: 3rem;
+}
+/* Ajouter un pseudo element a la fin de la balise h1 */
+h1:after{
+    /* Ajouter du contenu dans le pseudo element */
+    content: "";
+    display: block;
+    height: .2rem;
+    background: red;
+    margin: 1rem auto;
+    width: 10rem;
+}
+/* Ajouter un pseudo element au debut de la balise h1 */
+h1:before{
+    content: "\f005";
+    position: absolute;
+    top: 1.7rem;
+    left: 47.5%;
+    padding: .5rem;
+    background: white;
+    
+    /* Font awesome like */
+        font-family: FontAwesome;
+}
+h1{
+    text-align: center;
+    position: relative;
+
+}
