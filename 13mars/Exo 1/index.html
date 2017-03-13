@@ -1,133 +1,71 @@
-<!DOCTYPE html> <!--Déclarer le doctype-->
+<!--
 
-<html> <!-- Ouvrir la balise html --> 
+    -Créer un document de base HTML5
+    -Créer une ouverture de page
+        -Un titre principel
+        -Une navigation principal avec 4 liens
+        -Home
+        -About
+        -Portfolio
+        -Facebook
+    -Créer une zone de contenu principal
+        -Une section
+            -Sous-titre "About"
+            -1 image
+            -1 paragraphe
+        -Une section
+            -Sous-titre "Contacts"
+            -Formulaire : nom/email/message
+    -Créer une fermeture de page
+        -Under MIT Licence
 
-<!--Configurer la page-->
-<head>
+-->
 
-<!--Faire en sorte d'afficher mes accents-->
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Document</title>
+    </head>
 
-<!-- Ajouter un tittre a la page -->
-<title>Bonjour le monde</title>
+    <body>
+        <header>
+            <nav>
+                <h1>Titre Principal</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>About</h2>
+                <img src="img/img_fjords.jpg" alt="Fjords -"sous titre>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fuga consectetur quisquam voluptatum quaerat eum rem, deleniti architecto. Quae eaque dolorem asperiores atque in quo praesentium! Perspiciatis quas ducimus blanditiis?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dolorum in itaque consectetur eius ullam, esse dolorem doloribus sapiente, illo culpa ipsa quibusdam temporibus sequi. Quisquam amet est consequatur nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae architecto, consequatur magnam nobis natus pariatur ipsum voluptas aspernatur fugiat adipisci iure libero aperiam possimus voluptatem sequi sed aliquam autem at?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad maxime, non, veniam labore magni asperiores aut. Qui nobis laborum cum unde quam, consequatur fugiat quibusdam temporibus recusandae. Distinctio, ex facilis?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quisquam repudiandae accusantium a ratione, reprehenderit quaerat eligendi debitis fugit accusamus, nam adipisci illum. Dolor, modi, doloribus. Saepe itaque, veritatis vitae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis molestiae magnam labore natus voluptate iure, consequuntur magni quae dolorum odio quia quasi et unde accusamus amet veniam expedita quaerat aliquam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae blanditiis, impedit neque commodi, ratione natus officiis ut vero, accusamus in saepe. Vero voluptatem, nulla ipsam dignissimos necessitatibus velit possimus!</p>
+            </section>
+            <section>
+                <h2>Contacts</h2>
+                <form action="#">
+                    <label for="userName">Nom :</label>
+                    <input type="text" id="userName" placeholder="Min.5 caractères">
 
-<style>
-    td { 
-        border: 1px dashed black;
-         width: 50px;
-          height: 50px;
-          text-align: center;
-           }
+                    <label for="userEmail">Email :</label>
+                    <input type="email" id="userEmail" placeholder="Adresse mail valide">
 
-           ol { color: blue}
-           ul { color: red}
-           table {border-style: dashed; border-collapse: collapse;}
-           form {background-image: url(http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg); background-size: 100% 100% }
-           .test {text-align: center}
+                    <label for="userMessage">Message</label>
+                    <textarea id="userMessage" placeholder="min5. caractères"></textarea>                    
+                    <input type="submit" value="Envoyer votre message">
+                </form>
+            </section>
 
-
-
-
-
-</style>
-
-</head>
-
-
-<!-- Ajouter du contenu dans la page -->
-<body>
+        </main>
+        <footer>Under MIT Licence</footer>
     
-<!-- Définir une zone-->
-
-<!-- Les titres -->
-<h1>Titre principal</h1>  <!-- LA balise H1 doit etre unique -->
-<h2>Sous titre jusqu'a H6</h2>
-
-<!-- Un lien vers un nouvel onglet -->
-
-<a href="http://www.google.fr" target="_blank">Google</a>
-<!--lien dans le meme onglet-->
-<a href="about.html">A propos de moi</a>
-
-<!-- Paragraphe -->
-
-<p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Provident ea quo invento <i>re dolore aut q</i>uos eius laboriosam, quasi quis, possimus nostrum libero hic sit laborum nisi, magnam delectus eligendi aliquam.</p>
-
-<!-- Liste ordonnée -->
-
-<ol>
-    <li>Pierre</li>
-    <li>Paul</li>
-    <li>Jacques</li>
-</ol>
-<!-- Liste non ordonnée -->
-
-<ul>
-    <li>John</li>
-    <li>Paul</li>
-    <li>George</li>
-</ul>
-
-
-
-
-
-
-
-<img src="img/img_fjords.jpg" alt="Photo d'un fjord'" />
-
-<table border="1">
-    <tbody>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Mike</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</tbody>
-
-</table>
-
-
-
-
-<form action="about.html" method="POST">
-    <fieldset >
-        <legend> Mike </legend>
-<p class="test"> Nom:  <br> 
- <input type="text" name="Nom">  </p>
-<p class="test"> Prénom: <br>
- <input type="text" name="prénom"> </p> <br>
-<p class="test"> <input type="submit" value="Envoi" name="Envoi"> </p>
-    </fieldset>
-
-</form>
-
-</body>
-
-
-
-
-
-
-
-
-
-</html> <!-- Fermer la balise html -->
-
-
-
-
-
-
-
-
+    </body>
+</html>
