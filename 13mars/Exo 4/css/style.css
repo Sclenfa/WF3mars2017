@@ -1,0 +1,58 @@
+/*
+La section fait le tour de l'écran
+*/
+/* Définir les @keyframes */
+@-webkit-keyframes moveMySection{
+    /* Définir chaque étapes de l'animation */
+    0% { top:0; left:0;}
+    25% {top:0; left: 55rem;}
+    50% {top: 53.5rem;left:55rem;}
+    75% {top: 53.5rem; left:0;}
+    100% { top:0; left: 0;}
+}
+@keyframes moveMySection{
+    /* Définir chaque étapes de l'animation */
+    0% { top:0; left:0;}
+    25% {top:0; left: 55rem;}
+    50% {top: 53.5rem;left:55rem;}
+    75% {top: 53.5rem; left:0;}
+    100% { top:0; left: 0;}
+}
+    
+
+
+section{
+    height: 5rem;
+    width: 5rem;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Appliquer l'animation */
+    -webkit-animation-name: moveMySection;
+    animation-name: moveMySection;
+    -webkit-animation-duration: 0.00001s;
+    animation-duration: 0.00001s;
+    /* Modifier la course d'animation */
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    /* Ajouter un délai avant l'animation */
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    /* Gérer le nombre de boucle */
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    /* Gérer le sens de l'animation */
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+section:nth-child(2){
+    background: blue;
+    -webkit-animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse;
+}
+section:nth-child(3){
+    background: green;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out
+}
