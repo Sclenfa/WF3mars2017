@@ -14,14 +14,20 @@ Style Reset
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    text-align: center;
     }
     a{
         text-decoration: none;
         color: #349aa6;
     }
-    h1 span{
+    span{
         text-transform: lowercase;
-
+    }
+    section{
+        padding: 4rem 2rem;
+    }
+    p{
+        padding: 4rem 0;
     }
     /* Appliquer deux design different sur la balise h1 */
     h1{
@@ -31,15 +37,22 @@ Style Reset
         line-height: 1.8em;
         margin-bottom: 4rem
     }
+    h2, h3{
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 2.2rem;
+    }
     b{
         font-size: 2em;
         display: block;
+    }
+    figure{
+        padding: 2rem;
     }
 /*
 Style Header
 */
     header{
-        text-align: center;
         color: white;
         /* Image parrallaxe */
         background-image: url(../img/img-couverture-iphone.jpg);
@@ -77,4 +90,69 @@ Style Header
     a img{
         padding-top: .8rem;        
     }
-    
+
+/*
+Style  body
+*/
+    /* Programme */
+    section:nth-child(2), section:nth-child(4){
+        background-image: url(../img/img-foule.jpg);
+        color: white;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .callToAction{
+        color: white;
+        border: .1rem solid white;
+        display: inline-block;
+        padding: 1rem;
+        border-radius: .5rem;
+        margin-top: 2rem;
+    }
+    /* Solution */
+    section:nth-child(3){
+        background:#349aa6;
+        color: white;
+    }
+    /* Inscrivez-vous */
+    .callToAction.blue{
+        color: #349aa6;
+        border-color: #349aa6;
+    }
+    [alt="Logo salon des maires"]{
+        width: 10rem;
+        margin-bottom: 2rem;
+    }
+    /* Video */
+    section:nth-child(6){
+        color: white;
+        position: relative;
+    }
+    section:nth-child(6) article{
+        background: rgba(0,0,0,.7);
+        padding: 4rem 2rem;
+        /* Faire passer la balise sur la premiere couche */  
+        position: relative;
+        z-index: 1;
+    }
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    section:nth-child(6) h3{
+        font-weight: 900;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    section:nth-child(6) a{
+        color: white;
+    }
+/* Section Chiffres */
+    section:nth-child(7){
+        background: #349aa6;
+    }
+    section:nth-child(7) figure img{
+        width: 12rem;
+    }
