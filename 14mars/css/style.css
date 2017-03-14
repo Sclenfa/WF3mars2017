@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+@-webkit-keyframes pictoHeaderAnim{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(1rem);}
+    100%{transform: translateY(0);}
+}
+@keyframes pictoHeaderAnim{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(1rem);}
+    100%{transform: translateY(0);}
+}
+
+
 
 /*
 Style Reset
@@ -47,7 +59,10 @@ Style Reset
         display: block;
     }
     figure{
-        padding: 2rem;
+        padding: 2rem 0;
+    }
+    img{
+        max-width: 100%;
     }
 /*
 Style Header
@@ -86,6 +101,15 @@ Style Header
         height: 5rem;
         margin-bottom: 8rem;
         border-radius: 50%;
+        /* Appliquer l'animation */
+        -webkit-animation-name: pictoHeaderAnim;
+        animation-name: pictoHeaderAnim;
+        /* Définir la durée */
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        /* Définir le nombre de loop */
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
     }
     a img{
         padding-top: .8rem;        
@@ -108,13 +132,14 @@ Style  body
         padding: 1rem;
         border-radius: .5rem;
         margin-top: 2rem;
+        text-align: left;
     }
-    /* Solution */
-    section:nth-child(3){
+/* Solution, chiffres, Footer */
+    section:nth-child(3), section:nth-child(7), footer{
         background:#349aa6;
         color: white;
     }
-    /* Inscrivez-vous */
+/* Inscrivez-vous */
     .callToAction.blue{
         color: #349aa6;
         border-color: #349aa6;
@@ -123,10 +148,40 @@ Style  body
         width: 10rem;
         margin-bottom: 2rem;
     }
+    .callToAction:before{
+        /* Afficher une image dans le content */
+        content: url(../img/puce-bas-blanche.png) ;
+        display: block;
+        height: 3rem;
+        width: 3rem;
+        /* Habillez la balise */
+        float: left;
+        margin-right: 1.5rem; 
+    }
+    .callToAction:after{
+        /* Annuler le flottement */
+        clear: both;
+    }
+    .callToAction.blue:before{
+        content: url("../img/puce-droite-bleu.png");
+        display: block;
+        height: 3rem;
+        width: 3rem;
+        /* Habillez la balise */
+        float: left;
+        margin-right: 1.5rem;
+    }
+    .callToAction.blue:after{
+        clear: both;
+    }
+
+    
     /* Video */
     section:nth-child(6){
         color: white;
         position: relative;
+        /* Masquer les balises enfants qui dépassent du parent */
+        overflow: hidden;
     }
     section:nth-child(6) article{
         background: rgba(0,0,0,.7);
@@ -150,9 +205,24 @@ Style  body
         color: white;
     }
 /* Section Chiffres */
-    section:nth-child(7){
-        background: #349aa6;
+    
+    section:nth-child(7) figure{
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
     }
-    section:nth-child(7) figure img{
-        width: 12rem;
+/* Présentation */
+    article + img{
+        width: 25rem;
+        margin-bottom: 4rem;
+    }
+    iframe{
+        border: none;
+        width: 100%;
+        min-height: 30rem;
+    }
+/* Footer */
+    aside{
+        font-size: 1rem;
+        padding: 1rem;
     }
