@@ -1,0 +1,38 @@
+/*
+Style reset
+*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+html{
+    font-size: 62.5%;
+    background: black;
+}
+body{
+    font-size: 1.5rem
+}
+
+section:nth-child(1) article{
+    background: green;
+    width: 5rem;
+    height: 5rem;
+    border: .1rem solid white;;
+}
+section:nth-child(2) article{
+    background: blue;
+    width: 5rem;
+    height: 5rem;
+    border: .1rem solid white;
+}
+section:nth-child(3) article{
+    background: red;
+    width: 5rem;
+    height: 5rem;
+    border: .1rem solid white;
+}
+section article:nth-child(2){
+
+}

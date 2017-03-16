@@ -252,8 +252,7 @@ Requete media
             header{
                 padding-bottom: 13rem;
                 background-image: url(../img/img-couverture-desktop.jpg);
-            }
-            
+            }            
 }
 @media screen and (min-width: 750px){
         section:nth-child(3) figure{
@@ -280,7 +279,6 @@ Requete media
             width: 130%;
             height: auto;
         }
-
 }
 @media  screen and (min-width: 950px){
         /* Reset */
@@ -288,6 +286,5 @@ Requete media
             max-width: 95rem;
             margin-left: auto;
             margin-right: auto;
-        }
-        
+        }       
 }
