@@ -1,0 +1,108 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Griffy|Shadows+Into+Light');
+/*
+Style reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 400;
+        font-family: 'Shadows Into Light', cursive;
+    }
+    h1{
+        font-size: 4rem;
+        font-weight: 400;
+        font-family: 'Griffy', cursive; 
+    }
+    a, header li{
+        text-decoration: none;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+    ul{
+        list-style: none;
+    }
+
+/*
+Style header
+*/
+    header{
+        background: #af0303;
+        color: white;
+        padding: 2rem 2rem 4rem 2rem;
+        position: relative;
+    }
+    nav a{
+        color: white;
+        font-size: 1.7rem;
+    }
+    header li{
+        background: rgba(0, 0, 0, .6);
+        margin: .5rem;
+        padding: .5rem;
+    }
+    header li:hover{
+        background: white;
+    }
+    header li:hover a{
+        color: black
+    }
+    span{
+        display: block;
+        font-size: .6em;
+    }
+    header > a{
+        display: inline-block;
+        background: black;
+        width: 3.5rem;
+        height: 3.5rem;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: .1rem solid black;
+        color: white;
+        padding: 0.3rem;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition-delay: .35s;
+        transition-delay: .35s;
+    }
+    header > a:hover{
+        color: black;
+        background: white;
+    }
+    header > a:hover + nav{
+        display: block;
+    }
+    
+/*
+Style Footer
+*/
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #af0303;
+        color: white;
+
+    }
+    footer li:not(:last-of-type){
+        display: inline-block;
+        padding: 1rem;
+    }
+    footer a{
+        color: white;
+        font-size: 2rem;
+    }
