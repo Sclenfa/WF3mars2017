@@ -23,6 +23,11 @@ Style reset
         font-weight: 400;
         font-family: 'Griffy', cursive; 
     }
+    h2{
+        font-family: 'Griffy', cursive;
+        margin-bottom: 1rem;
+        
+    }
     a, header li{
         text-decoration: none;
         -webkit-transition: all .5s;
@@ -31,6 +36,10 @@ Style reset
     ul{
         list-style: none;
     }
+    img{
+        max-width: 100%;
+    }
+
 
 /*
 Style header
@@ -40,6 +49,9 @@ Style header
         color: white;
         padding: 2rem 2rem 4rem 2rem;
         position: relative;
+    }
+    nav{
+        display: none;
     }
     nav a{
         color: white;
@@ -74,9 +86,7 @@ Style header
         left: 50%;
         top: 100%;
         -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        -webkit-transition-delay: .35s;
-        transition-delay: .35s;
+        transform: translate(-50%, -50%);   
     }
     header > a:hover{
         color: black;
@@ -87,6 +97,90 @@ Style header
     }
     
 /*
+Style main
+*/
+        main{
+        padding: 4rem 2rem 10rem 2rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+        /* Portfolio */
+            figure{
+                position: relative;
+            }
+            figure:after{
+                content: "";
+                width: 100%;
+                height: 3rem;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: white;
+            }
+            figcaption{
+                font-size: 2rem;
+                background: black;
+                color: white;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                padding: 1rem;
+                width: 70%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                z-index: 1;
+            }
+            .portfolioPage main a{
+                color: white;
+                background: #af0303;                
+                padding: .5rem 1rem;
+                position: absolute;
+                z-index: 1;
+                top: -12%;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+            .portfolioPage article{
+                position: relative;
+                margin: 2rem auto;
+                /* Masquer les éléments qui dépassent */
+                overflow: hidden;
+            }
+            .portfolioPage article:hover a{
+                top: 20%;
+            }
+
+        /* Contacts */
+            input:not(:last-of-type), textarea{
+                width: 100%;
+                display: block;
+                border: none;
+                border-bottom: .1rem dotted #af0303;
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+            form{
+                margin: 2rem auto;
+            }
+            form :last-child{
+                background: #af0303;
+                color: white;
+                padding: 1.5rem;
+                border: none;
+            }
+            
+            textarea{
+                min-height: 15rem;
+            }
+            iframe{
+                border: none;
+                width: 100%;
+                min-height: 30rem;
+            }
+
+/*
 Style Footer
 */
     footer{
@@ -96,7 +190,7 @@ Style Footer
         width: 100%;
         background: #af0303;
         color: white;
-
+        z-index: 1;
     }
     footer li:not(:last-of-type){
         display: inline-block;
@@ -106,3 +200,43 @@ Style Footer
         color: white;
         font-size: 2rem;
     }
+
+@media screen and (min-width: 650px){
+    .portfolioPage article{
+        display: inline-block;
+        width: 49%;
+        padding: 0 1rem 0 0;
+    }
+    /* Selectionner les deux balises a partir de la 2eme */
+    .portfolioPage article:nth-child( 2n + 2 ){
+        padding: 0 0 0 1rem;
+    }
+}
+@media screen and (min-width: 750px){
+    /* Style header */
+        main, h1, nav{
+        max-width: 85rem;
+        margin: auto;
+        }
+        h1{
+            font-size: 4rem;
+        }
+        h1 span{
+            display: initial;
+        }
+        header{
+            text-align: left;
+            text-indent: 2rem;
+        }
+        header >a{
+            display: none;
+        }
+        nav{
+            display: block;
+        }
+        nav li{
+            display: inline-block;
+            text-indent: 0;
+        }
+        
+}
