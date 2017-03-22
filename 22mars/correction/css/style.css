@@ -177,4 +177,7 @@ Style Footer
         right: 0;
         top: -0.7rem;
     }
+    h2 span{
+        display: inline-block;
+    }
 }
