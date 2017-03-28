@@ -1,0 +1,99 @@
+/*
+Style Reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        font-size: 1.5rem;
+    }
+    img{
+        max-width: 100%;
+    }
+    a{
+        text-decoration: none;
+    }
+
+/*
+Style Header
+*/
+    header{
+        padding: 2rem;
+        border: .1rem dashed black;
+    }
+    nav{
+        max-width: 85rem;
+        margin: auto;
+        border: 1rem double red;
+        text-align: center;
+        position: relative
+    }
+    li:first-child{
+        left: 0;
+        position: absolute
+    }
+    li:last-child{
+        right: 0;
+        position: absolute;
+    }
+    li{
+        display: inline-block;
+    }
+
+/*
+Style main
+*/
+    main{
+        max-width: 85rem;
+        margin: auto;
+    }
+    section:not(:last-child){
+        margin-bottom: 4rem;
+    }
+/*
+Style Portfolio
+*/
+    figure{
+        width: 49%;
+        display: inline-block;
+        position: relative;
+    }
+    figcaption{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;       
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+/*
+Style footer
+*/
+    input:not(:last-of-type), textarea{
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    [type="submit"]{
+        background: red;
+        color: chartreuse;
+        border: none;
+        padding: 1rem;
+    }
+    form{
+        text-align: right;
+    }
+
+@media screen and (max-width:450px){
+    figure{
+        width: 100%;
+    }
+
+}
