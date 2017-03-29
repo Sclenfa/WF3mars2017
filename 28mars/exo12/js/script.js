@@ -1,5 +1,5 @@
-// Créer une variablede type objet
-var user = {
+// Créer une variable de type objet
+var user = { 
     firstName: 'Laurent',
     lastName: 'Prunet',
 
