@@ -17,7 +17,11 @@ body{
     text-align: center;
 }
 a{
-    text-decoration: none
+    text-decoration: none;
+    color: darkmagenta;  
+    font-size: 2rem;
+    -webkit-transition: all .5s;
+    transition: all .5s
 }
 img{
     max-width: 100%;
@@ -25,6 +29,11 @@ img{
 h1, h2, h3{
     font-family: 'Lobster', cursive;
     font-weight: 400;
+}
+main, h1,nav{
+        max-width: 85rem;
+        margin: auto;
+        position: relative;
 }
 
 /*
@@ -44,8 +53,29 @@ Style Header
         font-weight: 400
     }
     nav ul{
-        display: none;
+        height: 0;
+        overflow: hidden;
+        -webkit-transition: all 1s;
+        transition: all 1s
     }
+    .toggleBurger{
+        height: 15rem;
+    }
+    li{
+        color: yellowgreen;
+        background: rgba(255, 255, 255, .5);
+        padding: 1rem;
+        margin-bottom: .5rem;
+        -webkit-transition: all .5s;
+        transition: all .5s
+    }
+    .active{
+        background: white;
+    }
+    .active a{
+        color: darkmagenta;
+    }
+
     i{
         -webkit-border-radius: 50%;
         border-radius: 50%;
@@ -58,8 +88,8 @@ Style Header
         bottom: 0;
         cursor: pointer;
         padding-top: .6rem;
-        -webkit-transform: translate(-50%, 50%);
-        transform: translate(-50%, 50%)
+        -webkit-transform: translate(-50%, 115%);
+        transform: translate(-50%, 115%)
     }
 
 /*
@@ -89,3 +119,27 @@ Style Footer
         bottom: 0;
         left: 0;
     }
+
+@media screen and (min-width:850px){
+
+    /* Style Header */
+    header{
+        text-align: left;
+    }
+    .fa-bars{
+        display: none;
+    }
+    nav ul{
+        height: auto;
+        position: absolute;
+        right: 0;
+        bottom: 0
+    }
+    li{
+        display: inline-block;
+    }
+    li:not(:last-child){
+        margin-right: 1rem;
+    }
+
+}

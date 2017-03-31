@@ -28,24 +28,36 @@ $(document).ready(function(){
     // Générer une balise nav + ul dans le header
     myHeader.append('<nav><i class="fa fa-bars" aria-hidden="true"></i><ul></ul></nav>');
 
+    // Activer le burgerMenu au click sur la balise .fa-bars
+
+    $('.fa-bars').click(function(){
+    $('ul').toggleClass('toggleBurger')
+
+    })
+
     // Faire une boucle sur myNav pour généré les liens de la nav
     for (var i = 0; i < myNav.length; i++) {
 
         // Générer les balise html
         $('ul').append('<li><a href="' +myNav[i] + '">' + myNav[i] + '</a></li>');
     }
-    $('i').click(function(){
-        $('ul')
 
-    })
 
     // Afficher dans le main le titre issu de l'objet mytitle
     var myMain = $('main');
     myMain.append('<h2>' + myTitle.Accueil + '</h2>')
     myMain.append('<section>' + myContent.Accueil + '</section>')
 
+    // Ajouter la class active sur la premiere li de la nav
+    $('li:first').addClass('active')
+
     // Capter l'evenement clic sur les balises a en bloquant le comportement naturel des balise a
     $('a').click(function(evt){
+
+        // Supprimé la class .active des balises li de la nav
+        $('li').removeClass('active')
+        
+
         // Bloquer le comportement naturel de la balise
         evt.preventDefault();
 
@@ -62,17 +74,22 @@ $(document).ready(function(){
             $('h2').text(myTitle.Accueil);
             // Selectionner la section pour changé le contenu
             $('section').html(myContent.Accueil)
+            $(this).parent().addClass('active')
 
         }else if($(this).attr('href')=='Portfolio'){
             $('h2').text(myTitle.Portfolio);
             $('section').html(myContent.Portfolio)
+            $(this).parent().addClass('active')
 
         }else{
             $('h2').text(myTitle.Contacts);
             $('section').html(myContent.Contacts)
-            
+            // Ajouter la class active sur la balise li de la balise a selectionnée
+            $(this).parent().addClass('active')
 
         }
+        // Fermer le burgerMenu
+        $('ul').removeClass('toggleBurger')
         });
 
 
