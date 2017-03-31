@@ -1,3 +1,5 @@
+
+
 // Selectionner la balise dans laquelle ajouter une autre balise
 var myMain=document.querySelector('main');
 
