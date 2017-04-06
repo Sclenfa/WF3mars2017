@@ -1,0 +1,324 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Griffy|Shadows+Into+Light');
+
+
+/*
+Style reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 400;
+        font-family: 'Shadows Into Light', cursive;
+    }
+    h1{
+        font-size: 4rem;
+        font-weight: 400;
+        font-family: 'Griffy', cursive; 
+    }
+    h2{
+        font-family: 'Griffy', cursive;
+        margin-bottom: 1rem;
+        
+    }
+    a, header li{
+        text-decoration: none;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+    ul{
+        list-style: none;
+    }
+    img{
+        max-width: 100%;
+    }
+
+
+/*
+Style header
+*/
+    header{
+        background: #af0303;
+        color: white;
+        padding: 2rem 2rem 4rem 2rem;
+        position: relative;
+    }
+    nav{
+        display: none;
+    }
+    .aboutPage nav{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 20rem;
+        padding: 2rem;
+        background: black;
+        z-index: 10000;
+        display: block;
+    }
+    nav a{
+        color: white;
+        font-size: 1.7rem;
+    }
+    header li{
+        background: rgba(0, 0, 0, .6);
+        margin: .5rem;
+        padding: .5rem;
+    }
+    header li:hover{
+        background: white;
+    }
+    header li:hover a{
+        color: black
+    }
+    span{
+        display: block;
+        font-size: .6em;
+    }
+    header > a{
+        display: inline-block;
+        background: black;
+        width: 3.5rem;
+        height: 3.5rem;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: .1rem solid black;
+        color: white;
+        padding: 0.3rem;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);   
+    }
+    header > a:hover{
+        color: black;
+        background: white;
+    }
+
+/*
+Style main
+*/
+    main{
+        padding: 4rem 2rem 10rem 2rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+        /* Portfolio */
+        figure{
+            position: relative;
+        }
+        figcaption{
+            position: absolute;
+            width: 15rem;
+            top: 50%;
+            left: 50%;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.51);
+            color: white;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-border-top-left-radius: 1rem;
+            border-top-left-radius: 1rem;
+        }
+        figcaption button{
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            border: none;
+            padding: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        #modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(175, 3, 3, 0.9);
+            width: 100%;
+            height: 100%;
+            z-index: 100000000;
+            /* Pour l'animation */
+            display: none;
+        }
+        #modal article{
+            background: white;
+            max-width: 35rem;
+            margin: 5rem auto;
+            padding: 2rem;
+        }
+        .fa{
+            cursor: pointer;
+        }
+
+        /* Contacts */
+
+
+            /* About */
+        [src= "http://www.lorempixel.com/400/400/cats"]{
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            -webkit-box-shadow: 1rem;
+            -moz-box-shadow: 0 0 .5rem 0 black;
+            box-shadow: 0 0 .5rem 0 black;
+            border: solid .5rem white;
+        }
+        [src= "http://www.lorempixel.com/400/400/cats"] + p{
+            margin-bottom: 2rem;
+        }
+        h3 + ul{
+            text-align: left;
+            margin: 2rem auto;
+        }
+        h3 + ul li{
+            background: white;
+            padding: .1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            border: .5rem solid black;
+            -webkit-border-radius: 25rem;
+            border-radius: 25rem;
+        }
+        h3 + ul p{
+            background: #af0303;
+            padding: 1rem;
+            min-height: 3.5rem;
+            -webkit-border-radius: 25rem;
+            border-radius: 25rem;
+            /* Pour l'animation */
+            width: 0;
+        }
+        h3 + ul span{
+            position: absolute;
+            color: white;
+        }
+        form{
+            text-align: left;
+            margin: 2rem auto;
+        }
+        select{
+            margin: 1rem auto 3rem auto; 
+        }
+        textarea{
+            min-height: 20rem;
+        }
+        [type="checkbox"]{
+            display: inline-block;
+            width: auto;
+            margin-right: 1rem;
+        }
+        textarea, input, label{
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 1rem;
+        }
+        textarea, input:not([type="submit"]){
+            border-bottom: .1rem solid #af0303;
+            margin-bottom: 2rem;
+        }
+        form article{
+            position: relative;
+        }
+        label textarea{
+            top: 0
+        }
+        label:not([for="userSubject"]){
+            position: absolute;
+            top: .5rem;
+        }
+        label{
+            padding: 0;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+        }
+        form b{
+            color: #af0303;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+        }
+        label.openedLabel{
+            top: -2rem;
+            font-size: 1.2rem;
+            color: grey;
+        }
+        .hideError b{
+            opacity: 0;
+        }
+        form b{
+            -webkit-transition: opacity .5s;
+            transition: opacity .5s;
+        }
+
+
+/*
+Style Footer
+*/
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #af0303;
+        color: white;
+        z-index: 1;
+    }
+    footer li:not(:last-of-type){
+        display: inline-block;
+        padding: 1rem;
+    }
+    footer a{
+        color: white;
+        font-size: 2rem;
+    }
+
+@media screen and (min-width: 650px){
+    .portfolioPage article{
+        display: inline-block;
+        width: 49%;
+        padding: 0 1rem 0 0;
+    }
+    /* Selectionner les deux balises a partir de la 2eme */
+    .portfolioPage article:nth-child( 2n + 2 ){
+        padding: 0 0 0 1rem;
+    }
+}
+@media screen and (min-width: 750px){
+    /* Style header */
+        main, h1, nav{
+        max-width: 85rem;
+        margin: auto;
+        }
+        h1{
+            font-size: 4rem;
+        }
+        h1 span{
+            display: initial;
+        }
+        header{
+            text-align: left;
+            text-indent: 2rem;
+        }
+        header >a{
+            display: none;
+        }
+        nav{
+            display: block;
+        }
+        nav li{
+            display: inline-block;
+            text-indent: 0;
+        }
+        
+}
