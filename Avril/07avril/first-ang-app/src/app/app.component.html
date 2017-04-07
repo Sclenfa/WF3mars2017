@@ -1,0 +1,25 @@
+
+
+<header class="animated bounceInDown">
+  <h1>Brand New App <span>Etudiant Front-End</span></h1>
+  <a (click)="openBurger()"><i class="fa fa-bars"></i></a>
+
+  <!-- Ajouter une class conditionnelle -->
+  <nav [ngClass]="{'openedNav': burgerIsOpen}">
+    <ul>
+      <li><a (click)="closeBurger('/')">Accueil</a></li>
+      <li><a (click)="closeBurger('about')">A propos</a></li>
+      <li><a (click)="closeBurger('portfolio')">Portfolio</a></li>
+      <li><a (click)="closeBurger('contacts')">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="animated bounce">
+  <!-- Ajouter la directive pour afficher le contenu des routes -->
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="animated bounceInUp">
+  Under MIT Licence
+</footer>
