@@ -1,0 +1,146 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
+/* Style Reset */
+  
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%
+    }
+    body{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    img{
+        max-width: 100%
+    }
+    a{
+        text-decoration: none;
+    }
+
+/* Style Header */
+
+    header{
+        background-image: url(../img/header-bg.jpg);
+        background-position: center;
+        padding: 2rem 2rem 10rem 2rem;
+        text-align: center;
+        position: relative;
+        margin-bottom: 5rem;
+    }
+    li:not(:first-child){
+        display: inline-block;
+        display: none;
+    }
+    li a:first-child{
+        color: gold;
+        font-size: 2rem;
+        position: absolute;
+        display: inline-block;
+    }
+    li{
+        text-align: left;
+        list-style-type: none;
+    }
+    h1{
+        color: white;
+        margin-top: 3.5rem;
+        font-size: 2rem;
+    }
+    h1 span{
+        text-transform: uppercase;
+        display: block;
+        font-size: 3rem;
+    }
+    h1 + a{
+        color: white;
+        background-color: gold;
+        padding: 2rem;
+        border-radius: .5rem;
+        position: absolute;
+        bottom: 0;
+        transform: translate(-50%, -50%)
+    }
+
+/* Style main */
+
+    /* Style Portfolio */
+
+        h2{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: bold
+        }
+        figure img{
+            width: 40rem;
+        }
+        figcaption{
+            background: white;
+            padding: 3rem;
+            width: 100%;
+            bottom: 0;
+            font-weight: bold;
+        }
+        figcaption i{
+            display: block;
+        }
+    /* Style Contacts */
+
+        section:last-child{
+            background-image: url(../img/map-image.png);
+            background-position: center;
+            background-color: black;
+            padding: 10rem 0 10rem 0;
+            color: white;
+        }
+        form article{
+            display: inline-block;
+            width: 46%;
+            margin-right: 1rem;
+        }
+        [type="submit"]{
+            color: white;
+            background-color: gold;
+            padding: 2rem;
+            border-radius: .5rem;
+            width: 93%;
+        }
+        input:not([type="submit"]), select, textarea{
+            width: 100%;
+            border: none;
+            height: 3rem;
+        }
+        input[type="submit"]{
+            margin-top: 2rem;
+        }
+        input, select{
+            margin: 1rem;
+        }
+        article:last-of-type{
+            vertical-align: top;
+            margin-top: 1rem;
+        }
+
+/* Style footer */
+
+    footer article:first-of-type a{
+        background-color: black;
+        width: 3rem;
+        height: 3rem;
+        padding: .5rem;
+        color: white;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+    footer article:last-of-type a{
+        color: gold;
+        text-align: right;
+    }
+
+
