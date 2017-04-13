@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda:400,700|Roboto:400,700');
+
+/* Style reset */
+
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%
+    }
+    body{
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    img{
+        max-width: 100%
+    }
+    h1, h2, h3{
+        font-family: 'Merienda', cursive;
+    }
+
+/* Style header */
+
+    header{
+        color: #B9CDFF;
+        background-image: url(../img/background.jpg);
+        padding-bottom: 5rem;
+    }
+    nav{
+        background: #061339;
+        color: white;
+        font-family: 'Merienda', cursive;
+        padding: 2rem;
+        text-align: left;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 5rem;
+    }
+    h1{
+        color: #FFF;
+        -webkit-text-shadow: 3px 1px 0px rgba(0, 0, 0, .5);;
+        text-shadow: 3px 1px 0px rgba(0, 0, 0, .5);
+    }
+
+/* Style main */
+
+    section:not(:last-of-type){
+        margin: 1.5rem;
+    }
+
+    form{
+        margin-bottom: 5rem;
+    }
+
+    h2, h3{
+        color: #2F4073;
+    }
+    h2{
+        padding: 1.5rem 0 2rem;
+        font-size: 3rem;
+    }
+    h3{
+        margin-bottom: 2rem;
+    }
+
+    /* Formulaire */
+        fieldset{
+            padding: 5rem 5rem 30rem 5rem;
+            position: relative;
+        }
+        b:first-child{
+            position: absolute;
+            top: .5rem;
+            left: .5rem;
+        }
+        select{
+            position: absolute;
+            top: 3rem;
+            left: 0.5rem;
+            width: 97%;
+        }
+        select + b{
+            position: absolute;
+            top: 6rem;
+            left: .5rem;
+        }
+        textarea{
+            position: absolute;
+            top: 8.5rem;
+            left: .5rem;
+            height: 19.2rem;
+            width: 30.2rem;
+        }
+        [type="submit"]{
+            position: absolute;
+            bottom: 3rem;
+            left: .5rem;
+            width: 97%;
+            background-color: #5cb85c;
+            color: white;
+            padding: 1rem;
+            border-radius: .5rem;
+            border: none;
+        }
+
+        /* Erreur sur formulaire */
+        .error{
+            border: .2rem solid red;
+        }
+
+    /* Derniere section */
+        section:last-of-type{
+            background-color: #ddd;
+            text-align: left;
+            padding: 1.5rem 0rem 1.5rem 1.5rem;
+        }
+
+        section:last-of-type:hover img{
+            background-color: #061339;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+        }
+        section:last-of-type img{
+            background-color: #7885A5;
+        }
+
+/* Style footer */
+    footer{
+        background: #061339;
+        color: white;
+        font-family: 'Merienda', cursive;
+        text-align: right;
+        padding: 1rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+    span{
+        display: block;
+    }
+
+@media screen and (min-width:850px){
+
+    section:not(:last-of-type){
+        width: 46%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    section:first-of-type{
+        float: right;
+        width: 63%;
+        margin-top: 6rem;
+    }
+    section:nth-child(2){
+        width: 25%;
+    }
+    h3{
+        text-align: left;
+        margin-left: 3.5rem;
+    }
+    form{
+        width: 25rem;
+    }
+    textarea{
+        width: 23.6rem;
+    }
+
+    img:last-of-type{
+        float: right;
+        height: 35rem;
+    }
+    article{
+        width: 49%;
+        display: inline-block;
+    }
+}
