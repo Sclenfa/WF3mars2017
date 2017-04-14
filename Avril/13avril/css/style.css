@@ -1,0 +1,69 @@
+/* Style Reset */
+
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%
+    }
+    body{
+        font-size: 1.5rem;
+    }
+    img{
+        max-width: 100%;
+    }
+    a{
+        text-decoration: none;
+    }
+
+/* Style header */
+
+    header{
+        background-color: #3e5e95;
+        color: white;
+        height: 10rem;
+        position: relative;
+    }
+    header form{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+    header label{
+        display: block;
+    }
+
+/* Style main */
+
+    main section{
+        width: 49%;
+        display: inline-block;
+    }
+    h2{
+        color: #123e76;
+    }
+    p + [type="submit"]{
+        background-color: #6d904b;
+    }
+    fieldset{
+        border: none;
+    }
+
+    fieldset{
+        display: block;
+    }
+
+    #coucou label, #coucou input, #coucou a{
+        display: block;
+        margin: 1rem 0 1rem 0;
+    }
+
+
+/* Style footer */
+
+    footer ul{
+        display: inline-block;
+    }
