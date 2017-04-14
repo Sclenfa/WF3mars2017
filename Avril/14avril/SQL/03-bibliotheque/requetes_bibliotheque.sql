@@ -18,6 +18,7 @@
         SELECT date_sortie FROM emprunt WHERE id_abonne = 2;
 
     -- 3. Combien d'emprunt on été effectué en tout ?
+        SELECT  COUNT(id_emprunt) FROM emprunt;
 
     -- 4. Combien de livre sont sortis le 2011-12-19 ?
 
