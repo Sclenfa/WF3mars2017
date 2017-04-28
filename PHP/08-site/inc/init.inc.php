@@ -7,7 +7,7 @@
         // Inclusion du fichier fonction.inc.php systematiquement dans tous les scripts
 
     // Connexion a la BDD:
-        $pdo = new PDO('mysql:host=localhost;dbname=entreprise', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+        $pdo = new PDO('mysql:host=localhost;dbname=site', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
     // Session:
         session_start();
@@ -16,9 +16,9 @@
         define('RACINE_SITE', '/PHP/08-site/');  // Ceci indique le dossier dans lequel ce situe le site dans 'localhost'.
 
     // Déclaration des variables d'affichage du site:
-        $contenu ='';
-        $contenu_gauche ='';
-        $contenu_droite ='';
+        $contenu = '';
+        $contenu_gauche = '';
+        $contenu_droite = '';
 
     // Autres inclusions:
         require_once('fonction.inc.php');

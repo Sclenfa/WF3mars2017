@@ -7,7 +7,7 @@
         <title>Ma Boutique SM</title>
         <!-- Les liens Bootstrap -->
         <link rel="stylesheet" href="<?php echo RACINE_SITE . 'inc/css/bootstrap.min.css'; ?>">
-        <link rel="stylesheet" href="<?php echo RACINE_SITE . 'inc/css/shop_homepage.css'; ?>">
+        <link rel="stylesheet" href="<?php echo RACINE_SITE . 'inc/css/shop-homepage.css'; ?>">
         <link rel="stylesheet" href="<?php echo RACINE_SITE . 'inc/css/portfolio-item.css'; ?>">
         <script src="<?php echo RACINE_SITE . 'inc/js/jquery.js'; ?>"></script>
         <script src="<?php echo RACINE_SITE . 'inc/js/bootstrap.min.js'; ?>"></script>
@@ -25,8 +25,8 @@
                     </button>
                     <a href="<?php echo RACINE_SITE . 'boutique.php'; ?>" class="navbar-brand">Ma Boutique SM</a>
                 </div>
-                <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
-                    <ul class="nav  navbar-nav">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
                         <?php
                         echo '<li><a href="'. RACINE_SITE .'boutique.php">Boutique</a></li>';
                         if(internauteEstConnecte()){    // Si membre est connecté
