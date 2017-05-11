@@ -1781,3 +1781,30 @@ img#wpstats {
 	display: inline-block;
 	margin: 0 20px;
 }
+
+.modele-trois-colonne-colonne-gauche{
+	float:left;
+	max-width: 160px;
+	border-right: 1px solid #c0c0c0;
+	padding: 20px;
+	min-height: 700px;
+}
+
+.modele-trois-colonne-colonne-centrale{
+	float:left;
+	max-width: 500px;
+	padding: 20px;
+	min-height: 700px;
+}
+
+.modele-trois-colonne-colonne-droite{
+	float:left;
+	max-width: 500px;
+	border-left: 1px solid #c0c0c0;
+	padding: 20px;
+	min-height: 700px;
+}
+
+.clear{
+	clear: both;
+}

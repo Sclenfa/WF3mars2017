@@ -1,0 +1,19 @@
+/*
+
+    Theme Name:   newtheme Child
+    Theme URI:    http://example.com/newtheme-child/
+    Description:  newtheme Child Theme
+    Author:       Cloud Strife
+    Author URI:   http://example.com
+    Template:     twentytwelve
+    Version:      1.0.0
+    License:      GNU General Public License v2 or later
+    License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+    Tags:         light, dark, two-columns, right-sidebar, responsibve-layout, accessibility-ready
+    Text Domain:  newtheme-child
+
+*/
+
+h1{
+    color: green;
+}

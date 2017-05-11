@@ -1,6 +1,6 @@
 <?php
 
-//******************************** Template name: modele trois colonnes ****************************//
+//******************************** Template name: modele trois colonnes
 
 get_header(); ?>
 
