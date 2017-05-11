@@ -33,7 +33,7 @@ $contenu .= '</table>';
 }
 
 if(isset($_GET['id_restaurant'])){
-	
+
 	$query = $pdo->prepare('SELECT * FROM restaurant WHERE id_restaurant = :id_restaurant');
 	$query->bindParam(':id_restaurant', $_GET['id_restaurant'], PDO::PARAM_INT);
 	$query->execute();
