@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            div{ width: 50%; margin: 0 auto;}
+            #demo{ border: 1px solid; padding: 30px;}
+            div h1{ color: white; padding: 20px; background-color: darkred;}
+        </style>
+    </head>
+    <body>
+        <div id="titre">
+            <h1>Ancien titre</h1>
+            <button type="button" id="action2">Changer titre</button>
+        </div>
+        <div>
+            <p id="demo">...</p>
+            <button type="button" id="action">Changer texte</button>
+        </div>
+
+        <script>
+            // On récupere l'element qui a l'id "action" pour mettre en place un evenement, execution d'une fonction lors du clic.
+
+            /*
+                Les statuts de la requete HMLHttpRequest:
+                    0 => objet créer, demande non initialisé
+                    1 => connexion du serveur etablie
+                    2 => demande reçue par le serveur
+                    3 => traitement coté serveur
+                    4 => demande terminé, la réponse est reçue
+            */
+
+            /*
+                Les statuts HTTP:
+                    200 => OK
+                    403 => Forbidden
+                    404 => Page Not Found
+                    https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP
+            */
+
+            document.getElementById("action").addEventListener("click", changeText);
+            function changeText(){
+                var xhttp= new XMLHttpRequest();  // Instanciation de l'objet XMLHttpRequest.
+
+
+                // Mise en place d'un evenement sur le changement d'etat
+                xhttp.onreadystatechange = function(){
+                    if(xhttp.readyState == 4 && xhttp.status == 200){
+                        // Lorsque le statut de la requete est à 4 et que le statut http vaut 200
+                        document.getElementById("demo").textContent = xhttp.responseText
+                    }
+                }
+                xhttp.open("GET", "ajax_info_text.txt", true);  // On prepare la requete. 1er argument: la methode, 2eme la page cible, 3eme mode asynchrone (true) ou synchrone (false) cette valeur est a true par defaut.
+                xhttp.send();  // On envoie la demande.
+            }
+
+            document.getElementById("action2").addEventListener("click", changeTitre);
+            function changeTitre(){
+                var xhttp= new XMLHttpRequest();
+
+                xhttp.onreadystatechange = function(){
+                    if(xhttp.readyState == 4 && xhttp.status == 200){
+
+                        document.getElementById("titre").innerHTML = xhttp.responseText
+                    }
+                }
+                xhttp.open("GET", "ajax_info_html.txt", true);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>

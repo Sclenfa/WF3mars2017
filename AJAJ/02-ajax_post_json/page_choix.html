@@ -1,0 +1,42 @@
+<!-- Faire une page avec champ select qui permet de choisir un prenom, mettre en place une requete ajax qui recupere le prenom choisi pour la passer dans les parametres et afficher la reponse dans notre page html -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="choix">
+            <label>Prenom</label>
+            <select id="prenom" onChange="ajax()">
+                <option value="thierry">Thierry</option>
+                <option value="emilie">Emilie</option>
+                <option value="chloe">Chloé</option>
+            </select>
+        </form>
+        <p id="resultat"></p>
+
+        <script>
+            function ajax(){
+                var file = "ajax.php";  // Notre page cible
+                r = new XMLHttpRequest();
+                var personne = document.getElementById("prenom");
+                personne = personne.value;
+                var parametres = "prenom="+personne;
+                r.open("post", file, true);  // Préparation
+                r.setRequestHeader("Content-type", "application/x-www-form-urlencoded");  // La methode setRequestHeader() definit la valeur d'un header http. Vous devez appelez cette methode entre la methode open() et send()
+                r.onreadystatechange = function(){
+                    if(r.readyState == 4 && r.status == 200){
+                        var obj = JSON.parse(r.responseText);
+                        // La methode parse de l'objet JSON permet d'evaluer la reponse et d'en faire un objet.
+                        document.getElementById("resultat").innerHTML = obj.resultat;
+                    }
+                }
+                r.send(parametres);  // Envoi
+            }
+        </script>
+    </body>
+</html>
