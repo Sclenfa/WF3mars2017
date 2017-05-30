@@ -44,6 +44,7 @@
                                 echo '<li><a href="'. RACINE_SITE .'admin/gestion_commande.php">Gestion des commandes</a></li>';
                                 echo '<li><a href="'. RACINE_SITE .'admin/gestion_membre.php">Gestion des membres</a></li>';
                             }
+
                         ?>
                     </ul>
                 </div>

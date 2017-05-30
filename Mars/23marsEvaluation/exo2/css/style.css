@@ -51,8 +51,12 @@ Style header
             padding: 2rem;
             margin-bottom: 4rem;
         }
-        ul{
+        ul:first-of-type{
             text-align: center;
+        }
+        ul:last-of-type{
+            display: block;
+            display: none;
         }
         li{
             font-size: 3rem;
