@@ -1,0 +1,111 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+<p>{{ myvar }}</p>
+
+    {# définir une variable dans la vue #}
+    {% set othervar = 1 %}
+    <p>{{ othervar }}</p>
+
+    {# tilde (~) pour concatener #}
+    <p>{{ myvar ~ othervar }}</p>
+
+    {% set vrai = true %}
+
+    {# condition #}
+
+    {% if vrai %}
+        <p>vrai</p>
+    {% endif %}
+
+    {# meme operateurs de comparaison qu'en php #}
+    {% if othervar == 1 %}
+        <p>othervar vaut 1</p>
+    {% endif %}
+
+    {# and & or  en toutes lettres pour && et || #}
+    {% if othervar == 1 and vrai %}
+        <p>Et logique</p>
+    {% endif %}
+
+    {# not pour ! #}
+    {% if not vrai %}
+        <p>Pas vrai</p>
+    {% else %}
+        <p>vrai</p>
+    {% endif %}
+
+    {% set tab = ['a', 'b', 'c'] %}
+    {% for letter in tab %}
+        {{ letter ~ ', ' }}
+    {% endfor %}
+
+    {% set tab2 = [] %}
+
+    {% for value in tab2 %}
+        {{ value }}
+    {% else %} {# si tab2 est un tableau vide #}
+        <p>Aucune valeur dans le tableau</p>
+    {% endfor %}
+
+    {# dans une boucle for, loop permet de savoir ou l'on en est dans la boucle #}
+    {% set tab3 = ['a', 'b', 'c', 'd', 'e'] %}
+    {% for letter in tab3 %}
+        {% if loop.first %}
+            <p style="color: blue; font-size: 100px">{{ letter }}</p>
+        {% elseif loop.last %}
+            <p style="color: red; font-size: 100px">{{ letter }}</p>
+        {% else %}
+            <p>{{ letter }}</p>
+        {% endif %}
+    {% endfor %}
+
+    {# tableau associatif #}
+    {% set arr = {'a':1, 'b':2} %}
+    {# foreach arr as key => value #}
+    {% for key, value in arr %}
+        {{ key }} : {{ value }} <br>
+    {% endfor %}
+
+    {# Appel d'une fonction #}
+    {{ dump(arr) }}
+
+    {% if tab2 is empty %}
+        <p>tab2 est vide</p>
+    {% endif %}
+
+    {% if othervar is odd %}
+        <p>othervar est impair</p>
+    {% endif %}
+
+    {% set neuf = 9 %}
+    {% if neuf  is divisible by(3) %}
+        <p>neuf est divisible par 3</p>
+    {% endif %}
+
+    {% if unknowvar is not defined %}
+        <p>unknowvar n'existe pas</p>
+    {% endif %}
+
+    {% set lines = "line1\nline2" %}
+    {# pipe (|) pour appliquer un filtre #}
+        <p>{{ lines|nl2br }}</p>
+
+    <p>{{ "now"|date('d/m/Y') }}</p>
+
+    {# inclusion d'un autre fichier #}
+    {% include 'include.html.twig' %}
+
+    {# le point pour acceder à un element d'un tableau #}
+    <p>{{ arr.a }}</p>
+
+    {% set str = '<p>test</p>' %}
+    {{ str }} {# le HTML est échaper #}
+    {{ str|raw }}  {# le HTML n'est pas echapé #}
+
+    <p><a href="{{ path('homepage') }}">Home</a></p>
+    <p><a href="{{ path('hello', {name: 'Sephiroth'}) }}">Hello Sephiroth</a></p>
+
+
+{% endblock %}

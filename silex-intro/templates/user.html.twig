@@ -1,0 +1,16 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    {% for value in id %}
+        <tr>
+            <td> {{ value.firstname }} </td>
+            <td> {{ value.lastname }} </td>
+            <td> {{ value.email }} </td>
+            <td> {{ value.adress }} </td>
+
+        </tr>
+    {% else %} {# si tab2 est un tableau vide #}
+        <p>Fail</p>
+    {% endfor %}
+
+{% endblock %}
